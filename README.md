@@ -1,1 +1,1 @@
-# CSPC - Computer Science for Physics and Chemistry
+#CSPC - Computer Science for Physics and Chemisrty
