@@ -20,8 +20,19 @@ def test_starts_at_N0():
 #   Check that calling simulate(...) with a negative lam raises a ValueError.
 #   Which pytest tool checks that an error is raised?
 
+def test_rejects_negative_rate():
+    with pytest.raises(ValueError):
+        simulate(N0=1000, lam=-0.4)
+
 
 # TODO 2: test_matches_law
 #   Check that the simulation's AVERAGE over many seeds is close to the
 #   physical law  N0 * exp(-lam * t).
 #   Which pytest tool compares floating-point values with a tolerance?
+def test_matches_law():
+    N0, lam = 10000, 0.4
+    dt = 0.05
+    avg = np.mean([simulate(N0, lam, dt=dt, seed = i) for i in range(200)], axis=0)
+    t = np.arange(len(avg)) * dt
+    expected = N0 * np.exp(-lam * t)
+    assert avg == pytest.approx(expected, rel=0.05)
