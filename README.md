@@ -23,3 +23,6 @@ conda activate cspc
 
 **Conclusion:**
 - I learned how to use Git branches and merges, create a Conda environment and run automated tests with pytest. The NumPy implementation was noticeably faster than the pure-Python loop. 
+
+**Partner Reproducibility**
+- I shared my CSPC repository with a partner who cloned it and created the environment from environment.yml. First,there was  an issue with Conda recognizing the environment, but after activating and deactivating Conda, the environment worked correctly. The tests then ran successfully without any changes to the repository files.
