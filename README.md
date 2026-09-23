@@ -26,3 +26,9 @@ conda activate cspc
 
 **Partner Reproducibility**
 - I shared my CSPC repository with a partner who cloned it and created the environment from environment.yml. First,there was  an issue with Conda recognizing the environment, but after activating and deactivating Conda, the environment worked correctly. The tests then ran successfully without any changes to the repository files.
+
+## PW1 --- Lab B:
+
+- The data shows that the number of particles decreasing over time. The observed data is close to the analytical decay law, but not exactly the same. 
+The Snakemake pipeline uses the CSV data and `plot.py` to create `figure.png`.
+
