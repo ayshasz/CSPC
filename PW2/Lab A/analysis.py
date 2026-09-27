@@ -61,3 +61,35 @@ axes[2].set_xlabel("Time (s)")
 plt.tight_layout()
 plt.savefig("motion.png")
 plt.show()
+
+# Bonus: 2D tracked trajectory
+
+trajectory = np.loadtxt("trajectory.csv", delimiter=",", skiprows=1)
+
+t2 = trajectory[:, 0]
+x = trajectory[:, 1]
+y2 = trajectory[:, 2]
+
+vx = np.gradient(x, t2)
+vy = np.gradient(y2, t2)
+
+speed = np.sqrt(vx**2 + vy**2)
+
+plt.figure(figsize=(8, 6))
+plt.plot(x, y2)
+plt.xlabel("x (m)")
+plt.ylabel("y (m)")
+plt.title("2D Trajectory")
+plt.axis("equal")
+plt.tight_layout()
+plt.savefig("trajectory.png")
+plt.show()
+
+plt.figure(figsize=(8, 6))
+plt.plot(t2, speed)
+plt.xlabel("Time (s)")
+plt.ylabel("Speed (m/s)")
+plt.title("Speed vs Time")
+plt.tight_layout()
+plt.savefig("speed.png")
+plt.show()

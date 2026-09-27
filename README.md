@@ -37,3 +37,5 @@ The Snakemake pipeline uses the CSV data and `plot.py` to create `figure.png`.
 - The mean acceleration from the free-fall data was -8.58 m/s², which is reasonably close to the expected value of -9.81 m/s². The acceleration was very noisy because taking derivatives makes the measurement noise larger.
 
 After integrating the acceleration back to velocity and then to position, the recovered position was close to the original position. The largest difference between them was 0.785 m. This shows that integration can reduce the effect of the noise
+
+BONUS: For the 2D trajectory, I calculated the velocity in the x and y directions using np.gradient(). I then calculated the speed using sqrt(vx**2 + vy**2) and plotted the trajectory and speed over time.
