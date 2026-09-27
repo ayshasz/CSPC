@@ -32,3 +32,8 @@ conda activate cspc
 - The data shows that the number of particles decreasing over time. The observed data is close to the analytical decay law, but not exactly the same. 
 The Snakemake pipeline uses the CSV data and `plot.py` to create `figure.png`.
 
+
+## PW2 --- Lab A: Motion from Tracking Data
+- The mean acceleration from the free-fall data was -8.58 m/s², which is reasonably close to the expected value of -9.81 m/s². The acceleration was very noisy because taking derivatives makes the measurement noise larger.
+
+After integrating the acceleration back to velocity and then to position, the recovered position was close to the original position. The largest difference between them was 0.785 m. This shows that integration can reduce the effect of the noise
